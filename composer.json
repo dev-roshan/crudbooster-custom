@@ -10,6 +10,7 @@
         "generator"
     ],
     "minimum-stability": "stable",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "Ferry",
