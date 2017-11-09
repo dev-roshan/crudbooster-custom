@@ -9,6 +9,7 @@
         "crud",
         "generator"
     ],
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Ferry",
