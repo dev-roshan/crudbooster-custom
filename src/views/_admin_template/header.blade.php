@@ -4,7 +4,8 @@
     <!-- Logo -->
     <a href="{{url(cbConfig('ADMIN_PATH'))}}"
        title='{{CRUDBooster::getSetting('appname')}}'
-       class="logo">{{CRUDBooster::getSetting('appname')}}</a>
+       class="logo">{{ CRUDBooster::getSetting('appname')==='Crudbooster'?'Company name':CRUDBooster::getSetting('appname') }}
+      </a>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">

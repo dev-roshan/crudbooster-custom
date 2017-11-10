@@ -25,13 +25,7 @@
 
 {!! cbStyleSheet('css/main.css') !!}
 <style type="text/css">
-    .login-page, .register-page {
-        background: {{ CRUDBooster::getSetting("login_background_color")?:'#dddddd'}} url('{{ CRUDBooster::getSetting("login_background_image")?asset(CRUDBooster::getSetting("login_background_image")):cbAsset('bg_blur3.jpg') }}');
-        color: {{ CRUDBooster::getSetting("login_font_color")?:'#ffffff' }}   !important;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
+   
 
     .login-box, .register-box {
         margin: 2% auto;
