@@ -33,6 +33,7 @@
     <input type="hidden" class="input-style" name="style[]">
     <input type="hidden" class="input-placeholder" name="placeholder[]">
     <input type="hidden" class="input-help" name="help[]">
+    <input type="hidden" class="input-cmp-ratio" name="cmp-ratio[]">
     <div class="input-options"></div>
 </td>
 <td>

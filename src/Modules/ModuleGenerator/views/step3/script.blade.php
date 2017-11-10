@@ -204,7 +204,7 @@
         var handleOptions = null;
 
         $('#modal-options .btn-save-option').click(function () {
-
+                debugger;
             var name = handleOptions.parent().parent().parent().parent().find('input.name').val();
             var close = true;
             $('#modal-options .modal-body').find('input,select,textarea').each(function () {
@@ -217,16 +217,18 @@
                         close = false;
                     }
                 }
+                
             })
             if (close == true) {
                 var style = $('#modal-options input[name=style]').val();
                 var placeholder = $('#modal-options input[name=placeholder]').val();
                 var help = $('#modal-options input[name=help]').val();
-
+                var cmp_ratio = $('#modal-options input[name=cmp-ratio]').val();
                 handleOptions.parent().parent().parent().find('.input-style').val(style);
                 handleOptions.parent().parent().parent().find('.input-placeholder').val(placeholder);
                 handleOptions.parent().parent().parent().find('.input-help').val(help);
-
+                handleOptions.parent().parent().parent().find('.input-cmp-ratio').val(cmp_ratio);
+                
                 if ($('#modal-options .input-options-item').length > 0) {
                     handleOptions.parent().parent().parent().find('.input-options').empty();
                     $('#modal-options .input-options-item').each(function () {
@@ -242,6 +244,7 @@
 
 
         $(document).on('click', '.btn-options', function () {
+            debugger;
             handleOptions = $(this);
             var input = handleOptions.parent().parent().find('input');
             var type = input.val();
@@ -249,17 +252,19 @@
             var style = handleOptions.parent().parent().parent().find('.input-style').val();
             var placeholder = handleOptions.parent().parent().parent().find('.input-placeholder').val();
             var help = handleOptions.parent().parent().parent().find('.input-help').val();
-
+            var cmp_ratio = handleOptions.parent().parent().parent().find('.input-cmp-ratio').val();
             $('#modal-options input[name=style]').val(style);
             $('#modal-options input[name=placeholder]').val(placeholder);
             $('#modal-options input[name=help]').val(help);
-
+            $('#modal-options input[name=cmp-ratio]').val(cmp_ratio);
             $.get("{{route('AdminModulesControllerGetTypeInfo')}}/" + type, function (r) {
                 r = JSON.parse(r);
+                
 
                 if (r.options) {
                     $('#modal-options .form-group-options').empty();
                     $.each(r.options, function (i, obj) {
+                        
                         var required = (obj.required) ? "required" : "";
                         var defaultValue = (obj.default) ? obj.default : "";
 

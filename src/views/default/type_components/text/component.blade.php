@@ -3,7 +3,7 @@
     <label class='control-label col-sm-2'>{{$label}} {!!($required)?"<span class='text-danger' title='This field is required'>*</span>":"" !!}</label>
 
     <div class="{{$col_width?:'col-sm-10'}}">
-        <input type='text' title="{{$label}}"
+        <input type='text' title="{{$label}}" cmp-ratio="{{@$formInput['style']}}"
                {{$required}} {{$readonly}} {!!$placeholder!!} {{$disabled}} {{$validation['max']?"maxlength=$validation[max]":""}} class='form-control'
                name="{{$name}}" id="{{$name}}" value='{{$value}}'/>
 

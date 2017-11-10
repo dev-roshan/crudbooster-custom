@@ -123,6 +123,7 @@ class Step3Handler
         $placeholder = $post['placeholder'];
         $style = $post['style'];
         $validation = $post['validation'];
+        $cmp_ratio=$post['cmp-ratio'];
 
         $script_form = [];
         foreach ($labels as $i => $label) {
@@ -139,6 +140,7 @@ class Step3Handler
             $form['placeholder'] = $placeholder[$i];
             $form['help'] = $help[$i];
             $form['style'] = $style[$i];
+            $form['cmp-ratio'] = $cmp_ratio[$i];
 
             $info = file_get_contents(CRUDBooster::componentsTypePath().$type[$i].'/info.json');
             $info = json_decode($info, true);

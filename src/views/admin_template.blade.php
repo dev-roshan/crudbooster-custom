@@ -63,7 +63,7 @@
                     <li class="active">{{$module->name}}</li>
                 </ol>
             @else
-                <h1>{{CRUDBooster::getSetting('appname')}}
+                <h1>{{ CRUDBooster::getSetting('appname')==='CRUDBooster'?'Company name':CRUDBooster::getSetting('appname')}}
                     <small>Information</small>
                 </h1>
             @endif

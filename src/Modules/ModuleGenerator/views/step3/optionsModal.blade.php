@@ -20,6 +20,10 @@
                     <label>Help</label>
                     <input type="text" name="help" class="form-control">
                 </div>
+                <div class="form-group">
+                    <label>Cmp-ratio</label>
+                    <input type="text" name="cmp-ratio" class="form-control">
+                </div>
                 <div class="form-group-options">
 
                 </div>
