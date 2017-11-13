@@ -1,5 +1,5 @@
 {
-    "name": "crocodicstudio/crudbooster",
+    "name": "davemusic/crudbooster-custom",
     "description": "CRUDBooster Is A New Way Laravel CRUD Generator. It's easy, fleksible, and powerful.",
     "type": "project",
     "license": "MIT",
@@ -11,8 +11,8 @@
     ],
     "authors": [
         {
-            "name": "Ferry",
-            "email": "ferry@crocodic.com"
+            "name": "roshan",
+            "email": "roshan.bhandari2050@gmail.com"
         }
     ],
     "minimum-stability": "dev",
