@@ -141,7 +141,7 @@ class Cms_settingsSeeder extends Seeder {
             'name'=>'appname',
             'label'=>'Application Name',
             'group_setting'=>trans('crudbooster.application_setting'),
-            'content'=>'CRUDBooster',
+            'content'=>'Shangrila',
             'content_input_type'=>'text',
             'dataenum'=>NULL,
             'helper'=>NULL],
@@ -437,7 +437,7 @@ class Cms_usersSeeder extends Seeder {
                 'id'                =>DB::table('cms_users')->max('id')+1,
                 'created_at'        =>date('Y-m-d H:i:s'),
                 'name'              => 'Super Admin',                
-                'email'             => 'admin@crudbooster.com',
+                'email'             => 'admin@admin.com',
                 'password'          => $password,
                 'id_cms_privileges' => 1,                
                 'status'            =>'Active'
