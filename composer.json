@@ -1,5 +1,5 @@
 {
-    "name": "dev-roshan/crudbooster-custom",
+    "name": "crocodicstudio/crudbooster",
     "description": "CRUDBooster Is A New Way Laravel CRUD Generator. It's easy, fleksible, and powerful.",
     "type": "project",
     "license": "MIT",
@@ -9,33 +9,24 @@
         "crud",
         "generator"
     ],
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "authors": [
         {
-            "name": "Roshan",
-            "email": "roshan.bhandari2050@gmail.com"
+            "name": "Ferry",
+            "email": "ferry@crocodic.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php":">=5.6",
         "barryvdh/laravel-dompdf": "0.8.*",
         "doctrine/dbal": "~2.3",        
         "maatwebsite/excel": "~2.1.0",                
         "unisharp/laravel-filemanager": "1.7.*",
-        "intervention/imagecache":"2.*",
-        "imanghafoori/laravel-widgetize":"1.8.*"
+        "intervention/imagecache":"2.*"
     },
     "autoload": {
         "psr-4": {
           "crocodicstudio\\crudbooster\\": "src/"
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "crocodicstudio\\crudbooster\\CRUDBoosterServiceProvider"
-            ]
-        }
-    }
+      }
 }

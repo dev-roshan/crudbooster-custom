@@ -5,7 +5,7 @@ A way to custom the index method is override the existing index method. This is 
 ```php
 public function getIndex() {
   //First, Add an auth
-   if(!CRUDBooster::isView()) CRUDBooster::denyAccess();
+   if(!CRUDBooster::isView()) CRUDBooster::redirect(CRUDBooster::adminPath(),trans('crudbooster.denied_access'));
    
    //Create your own query 
    $data = [];
