@@ -35,7 +35,7 @@ class CmsEmailTemplates extends Seeder {
             'content'     =>'<p>Hi,</p><p>Someone requested forgot password, here is your new password : </p><p>[password]</p><p><br></p><p>--</p><p>Regards,</p><p>Admin</p>',
             'description' =>'[password]',
             'from_name'   =>'System',
-            'from_email'  =>'system@crudbooster.com',
+            'from_email'  =>'roshanb@shangrilagroup.com.np',
             'cc_email'    =>NULL            
             ]);
     }
