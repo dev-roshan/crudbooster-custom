@@ -10,7 +10,11 @@ use Route;
 use Validator;
 
 class CRUDBooster  {		
-
+	
+	public static function typepath() {
+		$url='vendor/davemusic/crudbooster-custom/src/views/default/type_components/';
+		return $url;
+	}
 		public static function getSetting($name){	
 			if(Cache::has('setting_'.$name)) {
 				return Cache::get('setting_'.$name);

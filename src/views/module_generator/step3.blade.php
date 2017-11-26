@@ -54,13 +54,14 @@
 <script type="text/javascript">
 	var columns = {!! json_encode($columns) !!};
 	var types = {!! json_encode($types) !!};
+    debugger;
 	var validation_rules = ['required','string','integer','double','image','date','numeric','alpha_spaces'];
 	function ucwords (str) {
         return (str + '').replace(/^([a-z])|\s+([a-z])/g, function ($1) {
             return $1.toUpperCase();
         });
     }
-	function showTypeSuggest(t) {     
+	function showTypeSuggest(t) {   
         t = $(t);
 
         t.next("ul").remove();                 
@@ -217,8 +218,7 @@
             	$(this).parent('ul').prev('input[type=text]').val(v);            
             	$(this).parent('ul').remove();
 
-            	t.parent('tr').find('.option_area').empty();                
-
+            	t.parent('tr').find('.option_area').empty(); 
 	            $.getJSON("{{CRUDBooster::mainpath('type-info')}}/"+v,function(data) {                    
 
                     if(data.alert) {
@@ -449,7 +449,7 @@
         					<?php 
 
                                 $type = $form["type"]?:"text";
-        						$types = base_path('vendor/crocodicstudio/crudbooster/src/views/default/type_components/'.$type.'/info.json');
+                                $types = base_path(CRUDBooster::typepath().$type.'/info.json');
         						$types = file_get_contents($types);
         						$types = json_decode($types);     
 
