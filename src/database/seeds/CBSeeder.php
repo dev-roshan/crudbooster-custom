@@ -35,7 +35,7 @@ class CmsEmailTemplates extends Seeder {
             'content'     =>'<p>Hi,</p><p>Someone requested forgot password, here is your new password : </p><p>[password]</p><p><br></p><p>--</p><p>Regards,</p><p>Admin</p>',
             'description' =>'[password]',
             'from_name'   =>'System',
-            'from_email'  =>'roshanb@shangrilagroup.com.np',
+            'from_email'  =>'system@crudbooster.com',
             'cc_email'    =>NULL            
             ]);
     }
@@ -141,7 +141,7 @@ class Cms_settingsSeeder extends Seeder {
             'name'=>'appname',
             'label'=>'Application Name',
             'group_setting'=>trans('crudbooster.application_setting'),
-            'content'=>'Shangrila',
+            'content'=>'CRUDBooster',
             'content_input_type'=>'text',
             'dataenum'=>NULL,
             'helper'=>NULL],
@@ -437,7 +437,7 @@ class Cms_usersSeeder extends Seeder {
                 'id'                =>DB::table('cms_users')->max('id')+1,
                 'created_at'        =>date('Y-m-d H:i:s'),
                 'name'              => 'Super Admin',                
-                'email'             => 'admin@admin.com',
+                'email'             => 'admin@crudbooster.com',
                 'password'          => $password,
                 'id_cms_privileges' => 1,                
                 'status'            =>'Active'
