@@ -42,6 +42,8 @@ class CrudboosterInstallationCommand extends Command
         $this->symlinkForUpload();
         //Crate symlink for assets
         $this->symlinkForAsset();
+
+        $this->copyBaseCBController();
       
 		if($this->confirm('Do you have setting the database configuration at .env ?')) {
             $this->installCrudbooster();
@@ -234,5 +236,8 @@ class CrudboosterInstallationCommand extends Command
             $this->info('Please set public/vendor directory to writable 0777');
             exit;
         }
+    }
+    private function copyBaseCBController(){
+        copy('vendor/davemusic/crudbooster-custom/src/controllers/BaseCBController.php', 'app/Http/Controllers/BaseCBController.php');
     }
 }

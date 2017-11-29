@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>{{trans("crudbooster.page_title_login")}} : {{Session::get('appname')}}</title>
+    <title>{{trans("crudbooster.page_title_login")}} : {{CRUDBooster::getSetting('appname')}}</title>
     <meta name='generator' content='CRUDBooster'/>
     <meta name='robots' content='noindex,nofollow'/>
     <link rel="shortcut icon" href="{{ CRUDBooster::getSetting('favicon')?asset(CRUDBooster::getSetting('favicon')):asset('vendor/crudbooster/assets/logo_crudbooster.png') }}">
@@ -31,7 +31,7 @@
     <link rel='stylesheet' href='{{asset("vendor/crudbooster/assets/css/main.css")}}'/>
     <style type="text/css">
       .login-page, .register-page {
-          background:#355C7D;
+          background: #355C7D;
       }
       .login-box, .register-box {
         margin: 2% auto;

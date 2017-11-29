@@ -42,6 +42,11 @@
 	<script src="{{ asset ('vendor/crudbooster/assets/adminlte/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 	<script src="{{ asset ('vendor/crudbooster/assets/adminlte/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
 
+    <!--Nepali Date Picker-->
+	<link rel="stylesheet" href="{{ asset ('vendor/crudbooster/assets/nepali_date/nepali.datepicker.v2.2.min.css')}}">
+	<script src="{{ asset ('vendor/crudbooster/assets/nepali_date/nepali.datepicker.v2.2.min.js')}}"></script>
+	<script src="{{ asset ('vendor/crudbooster/assets/nepali_date/nepalidateConvertorCustom.js')}}"></script>
+		 
 	<script>			
 		var ASSET_URL           = "{{asset('/')}}";
 		var APP_NAME            = "{{Session::get('appname')}}";
